@@ -1,0 +1,49 @@
+.taskItem {
+  padding: 20px 0;
+  border-bottom: 1px dotted #666;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.taskItemTitle {
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-top: 2px solid #85bf6b;
+    width: 0;
+    height: 40%;
+    content: '';
+  }
+
+  .taskItemCompleted & {
+    color: #666;
+    font-style: italic;
+  }
+
+  .taskItemCompleted &:after {
+    width: 100%;
+  }
+}
+
+.taskItemInput {
+  outline: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+
+  // hide `x`
+  &::-ms-clear {
+    display: none;
+  }
+}
+
+.buttons {
+  display: inline-block;
+  float: right;
+}
