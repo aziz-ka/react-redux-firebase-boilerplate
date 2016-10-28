@@ -1,0 +1,4 @@
+client/**/*.test.js
+--require babel-register
+--recursive
+--reporter spec

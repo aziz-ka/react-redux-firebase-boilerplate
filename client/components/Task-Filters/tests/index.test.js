@@ -12,11 +12,6 @@ describe('<TaskFilters />', () => {
     const filterLinks = wrapper.find('Link');
 
     expect(filterLinks).to.have.length(3);
-  });
-
-  it('should add an "acitive" className to "completed" filter', () => {
-    const wrapper = shallow(<TaskFilters filter='completed' />);
-
-    expect(wrapper.find(styles.active)).to.exist;
+    expect(wrapper.find(`.${styles.active}`)).to.have.length(1);
   });
 });

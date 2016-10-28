@@ -15,6 +15,6 @@ describe('<Icon />', () => {
   it('should render an icon with provided className', () => {
     const wrapper = shallow(<Icon className="foo bar" name="play" />);
 
-    expect(wrapper.find('material-icons foo bar')).to.exist;
+    expect(wrapper.find('.material-icons .foo .bar')).to.have.length(1);
   });
 });

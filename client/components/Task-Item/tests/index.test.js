@@ -11,8 +11,8 @@ describe('<TaskItem />', () => {
     const wrapper = shallow(<TaskItem removeTask={() => {}} task={{}} updateTask={() => {}} />);
 
     expect(wrapper.find('li')).to.have.length(1);
-    expect(wrapper.find(styles.taskItemTitle)).to.exist;
-    expect(wrapper.find(styles.taskItemInput)).to.have.length(0);
+    expect(wrapper.find(`.${styles.taskItemTitle}`)).to.have.length(1);
+    expect(wrapper.find(`.${styles.taskItemInput}`)).to.have.length(0);
     expect(wrapper.find('Button')).to.have.length(4);
     expect(wrapper.state('editing')).to.be.false;
   });
@@ -21,8 +21,8 @@ describe('<TaskItem />', () => {
     const wrapper = shallow(<TaskItem removeTask={() => {}} task={{title: 'test title'}} updateTask={() => {}} />);
 
     expect(wrapper.find('li')).to.have.length(1);
-    expect(wrapper.find(`div.${styles.taskItemTitle}`)).to.have.length(1);
-    expect(wrapper.find(`input.${styles.taskItemInput}`)).to.have.length(0);
+    expect(wrapper.find(`.${styles.taskItemTitle}`)).to.have.length(1);
+    expect(wrapper.find(`.${styles.taskItemInput}`)).to.have.length(0);
     expect(wrapper.find('Button')).to.have.length(4);
     expect(wrapper.state('editing')).to.be.false;
     expect(wrapper.instance().props.task.title).to.eql('test title');
