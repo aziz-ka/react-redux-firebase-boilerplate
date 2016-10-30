@@ -22,11 +22,11 @@
     "firebase"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=prod webpack --display-chunks --progress",
+    "build": "cross-env NODE_ENV=production webpack --display-chunks --progress",
     "clean": "del-cli ./build",
     "lint": "eslint -c .eslintrc.yml *.js ./client ./server",
     "prebuild": "npm-run-all clean lint test",
-    "server": "cross-env NODE_ENV=dev nodemon -w 'server/**/*.*' ./server/main.js",
+    "server": "cross-env NODE_ENV=production nodemon -w 'server/**/*.*' ./server/main.js",
     "server:dev": "cross-env NODE_ENV=dev webpack-dashboard -- webpack-dev-server --progress",
     "start": "npm run server:dev",
     "test": "cross-env NODE_ENV=test mocha --opts ./mocha.opts",

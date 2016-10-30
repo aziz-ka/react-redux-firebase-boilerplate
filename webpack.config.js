@@ -13,7 +13,7 @@ const WebpackMd5Hash = require('webpack-md5-hash');
 const NODE_ENV = process.env.NODE_ENV;
 
 const ENV_DEVELOPMENT = NODE_ENV === 'dev';
-const ENV_PRODUCTION = NODE_ENV === 'prod';
+const ENV_PRODUCTION = NODE_ENV === 'production';
 const ENV_TEST = NODE_ENV === 'test';
 
 const HOST = process.env.HOST || 'localhost';
@@ -40,7 +40,7 @@ const loaders = {
     },
     prod: {
       test: /\.scss$/,
-      loader: ExtractTextPlugin.extract('style!css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]&-autoprefixer!postcss!sass')
+      loader: ExtractTextPlugin.extract('style-loader', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]&-autoprefixer!postcss!sass')
     }
   }
 };
