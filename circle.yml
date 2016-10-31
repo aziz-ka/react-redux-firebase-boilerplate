@@ -9,6 +9,7 @@ dependencies:
 test:
   override:
     - npm run build
+    - npm run coverage
   post:
     - bash <(curl -s https://codecov.io/bash)
 
