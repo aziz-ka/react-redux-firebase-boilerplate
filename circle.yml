@@ -9,9 +9,12 @@ dependencies:
 test:
   override:
     - npm run build
+    - npm run coverage
+  post:
+    - bash <(curl -s https://codecov.io/bash)
 
-deployment:
-  production:
-    branch: master
-    commands:
-      - ./node_modules/.bin/firebase deploy --token $FIREBASE_TOKEN
+# deployment:
+#   production:
+#     branch: master
+#     commands:
+#       - ./node_modules/.bin/firebase deploy --token $FIREBASE_TOKEN
