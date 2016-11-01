@@ -1,3 +1,5 @@
+import firebase from 'firebase';
+
 import { ACTIONS } from './constants';
 
 
