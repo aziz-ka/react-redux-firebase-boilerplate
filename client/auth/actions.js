@@ -55,3 +55,7 @@ export function signInWithGoogle() {
 export function signInWithTwitter() {
   return signIn(new firebase.auth.TwitterAuthProvider());
 }
+
+export function signInWithFacebook() {
+  return signIn(new firebase.auth.FacebookAuthProvider());
+}

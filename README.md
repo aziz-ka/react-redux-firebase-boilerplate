@@ -1,4 +1,6 @@
-[![CircleCI](https://circleci.com/gh/aziz-ka/react-redux-firebase-boilerplate.svg?style=shield&circle-token=cb8b0780c1e777282c670710271b50ea3da13611)](https://circleci.com/gh/aziz-ka/react-redux-firebase-boilerplate)
+[![CircleCI](https://circleci.com/gh/aziz-ka/react-redux-firebase-boilerplate.svg?style=shield)](http://circleci.com/gh/aziz-ka/react-redux-firebase-boilerplate)
+[![codecov.io](http://codecov.io/github/aziz-ka/react-redux-firebase-boilerplate/coverage.svg?branch=master)](http://codecov.io/github/aziz-ka/react-redux-firebase-boilerplate?branch=master)
+[![Dependency Status](http://david-dm.org/aziz-ka/react-redux-firebase-boilerplate/dev-status.svg)](https://david-dm.org/aziz-ka/react-redux-firebase-boilerplate?type=dev)
 
 
 # A simple React-Redux-Firebase boilerplate
@@ -9,13 +11,10 @@
 ## Stack
 
 - React
-- React-Hot-Loader `3.0.0-beta.2`
 - React-Redux
-- React-Router
 - React-Router-Redux
 - Redux
 - Redux-Saga
-- Redux-Devtools-Extension for Chrome
 - Firebase SDK 3 with OAuth authentication
 - Babel
 - Immutable
@@ -23,7 +22,6 @@
 - CSS Modules
 - SASS
 - Webpack
-- Webpack Dashboard
 
 
 ## Quick Start
@@ -81,9 +79,10 @@ $ firebase deploy
 
 |Script|Description|
 |---|---|
-|`npm start`|Start webpack development server @ `localhost:3000`|
+|`npm run dev`|Start webpack development server @ `localhost:3000`|
 |`npm run build`|Lint, test, and build the application to `./build`|
 |`npm run lint`|Lint `.js` files|
-|`npm run server`|Start express server @ `localhost:3000` to serve built artifacts from `./build` (must run `npm run build` first)|
-|`npm test`|Run unit tests with Karma and Jasmine|
-|`npm run test:watch`|Run unit tests with Karma and Jasmine; watch for changes to re-run tests|
+|`npm start`|Start express server @ `localhost:3000` to serve built artifacts from `./build` (must run `npm run build` first)|
+|`npm test`|Run unit tests with Mocha and Chai|
+|`npm run test:watch`|Run unit tests with Mocha and Chai; watch for changes to re-run tests|
+|`npm run coverage`|Run code coverage with Istanbul|

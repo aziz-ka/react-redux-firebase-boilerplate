@@ -1,0 +1,14 @@
+node_modules/
+build/
+coverage/
+target/
+tmp/
+.git
+node-debug.log
+.firebaserc-example
+client/firebase/config-example.js
+.DS_Store
+Thumbs.db
+.idea/
+.project
+*.iml
