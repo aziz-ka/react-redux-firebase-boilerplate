@@ -30,7 +30,7 @@
 $ git clone https://github.com/aziz-ka/react-redux-firebase-boilerplate.git
 $ cd react-redux-firebase-boilerplate
 $ npm install
-$ npm start
+$ npm run dev
 ```
 Then rename `/firebaserc-example` and `/client/firebase/config-example.js` by removing the `-example` part and provide your project's API keys
 
